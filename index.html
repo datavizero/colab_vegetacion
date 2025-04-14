@@ -112,7 +112,7 @@
         var placingTree = false;
         var currentIcon = null;
 
-        fetch('https://mapariva-4fd04a7c2772.herokuapp.com/locations')
+        fetch('https://mapveg-4c7f1812fb47.herokuapp.com/locations')
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Error ${response.status}: ${response.statusText}`);
@@ -257,7 +257,7 @@
 
             location.name = name;
 
-            fetch('https://mapariva-4fd04a7c2772.herokuapp.com/locations', {
+            fetch('https://mapveg-4c7f1812fb47.herokuapp.com/locations', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ ...location, recaptcha: recaptchaResponse })
